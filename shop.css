@@ -65,9 +65,12 @@ h4 {
 }
 
 .product-card {
-  padding: 15px 10px;
   border-right: 1px solid gray;
   border-bottom: 1px solid gray;
+}
+
+.product-details {
+  padding: 15px 10px;
 }
 
 .product-name {
@@ -91,8 +94,8 @@ h4 {
   padding: 5px 10px;
   margin: 10px 0;
   border-radius: 10px;
-  color: rgb(255, 166, 255);
-  background-color: #dbdac6;
+  color: #fff;
+  background-color: #7e502e;
 }
 
 .add-to-cart {
@@ -109,4 +112,23 @@ h4 {
 .add-to-cart:hover {
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 3rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brandname {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }

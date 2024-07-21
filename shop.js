@@ -32,12 +32,6 @@ const products = [
     description: "Sleek bamboo canisters for plastic-free food storage.",
     image: "./Media/product5.jpg",
   },
-  //   {
-  //     name: "Bamboo Toothbrush",
-  //     price: 300,
-  //     description: "Lorem ipsum dolor sit amet consectetur.",
-  //     image: "./Media/product6.jpg",
-  //   },
   {
     name: "Herbal Creme",
     price: 450,
@@ -69,6 +63,9 @@ const addProducts = () => {
     productImg.setAttribute("src", products[i]["image"]);
     productImg.setAttribute("width", "100%");
 
+    const productDetails = document.createElement("div");
+    productDetails.classList.add("product-details");
+
     const productName = document.createElement("h3");
     productName.classList.add("product-name");
     productName.innerText = products[i]["name"];
@@ -90,12 +87,13 @@ const addProducts = () => {
     addButton.innerText = "Add to Cart";
 
     productContainer.appendChild(productImg);
-    productContainer.appendChild(productName);
-    productContainer.appendChild(productDesc);
-    productContainer.appendChild(productAssurity);
-    productContainer.appendChild(productPrice);
-    productContainer.appendChild(addButton);
+    productDetails.appendChild(productName);
+    productDetails.appendChild(productDesc);
+    productDetails.appendChild(productAssurity);
+    productDetails.appendChild(productPrice);
+    productDetails.appendChild(addButton);
 
+    productContainer.appendChild(productDetails);
     container.appendChild(productContainer);
   }
 };
