@@ -110,7 +110,7 @@ h4 {
 }
 
 #page2part1 h3 {
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: 200;
   margin-left: 3vw;
   margin-right: 3vw;
@@ -144,7 +144,7 @@ h4 {
 }
 
 #page3-top h2 {
-  font-size: 4vw;
+  font-size: 4rem;
   text-align: center;
   font-weight: 100;
 }
@@ -202,7 +202,7 @@ h4 {
 }
 
 #page4top h3 {
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 3vh;
 }
@@ -218,7 +218,7 @@ h4 {
   padding-left: 2vw;
 }
 #page4bottom h3 {
-  font-size: 4vw;
+  font-size: 4rem;
   font-weight: 100;
 }
 
@@ -239,6 +239,7 @@ h4 {
 #page5 svg {
   position: absolute;
   height: 60%;
+  width: 100%;
 }
 
 #page5 h4 {
@@ -332,4 +333,69 @@ h4 {
 
 .page7-inner:hover i {
   color: #000;
+}
+
+@media screen and (max-width: 1024px) {
+  #page1 > #hero-video {
+    height: 100%;
+  }
+
+  nav > h3,
+  nav > a > h4,
+  #page2part1 > h3,
+  #page4top h3 {
+    font-size: 1.2rem;
+  }
+
+  #page2part2 > h3,
+  #page3-top h2,
+  #page4bottom h3 {
+    font-size: 2rem;
+    height: 100%;
+  }
+
+  #page3-elements {
+    flex-direction: column;
+  }
+
+  #page3-elements .box {
+    width: 100%;
+    height: 250px;
+  }
+
+  .box > img,
+  .box > video {
+    object-fit: cover;
+  }
+
+  #page5 {
+    height: 75vh;
+  }
+
+  #page5 svg {
+    width: 55%;
+  }
+
+  #page5 > h4 {
+    font-size: 12px;
+  }
+  #page5 > video {
+    width: 100%;
+  }
+
+  .page7-inner {
+    padding: 0 40px;
+  }
+
+  .page7-inner > h1,
+  .page7-inner > i {
+    font-size: 2rem;
+  }
+
+  #page6 h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
 }
