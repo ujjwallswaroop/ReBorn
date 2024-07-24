@@ -1,6 +1,6 @@
 @font-face {
-  font-family: rejoy;
-  src: url(./Media/Rejouice-Headline.ttf);
+  font-family: nb;
+  src: url(./Media/NBInternationalProBoo.ttf);
 }
 *{
     margin: 0;
@@ -10,7 +10,7 @@
 html , body{
     height: 100%;
     width: 100%;
-    font-family: rejoy;
+    font-family: nb;
 }
 
 nav{
