@@ -1,6 +1,6 @@
 @font-face {
-    font-family: rejoy;
-    src: url(/Rejouice-Headline.ttf);
+  font-family: rejoy;
+  src: url(./Media/Rejouice-Headline.ttf);
 }
 *{
     margin: 0;
