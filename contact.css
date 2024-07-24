@@ -1,0 +1,96 @@
+@font-face {
+    font-family: rejoy;
+    src: url(/Rejouice-Headline.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    font-family: rejoy;
+}
+
+nav{
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    padding: 3vw 3vw;
+}
+
+nav a{
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+#bgv{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vh;
+}
+
+.contact-left-titile h2{
+    font-weight: 100;
+    font-size: 5vw;
+    margin-bottom: 5px;
+    color: 	black;
+}
+
+.contact-inputs{
+    height: 50px;
+    width: 400px;
+    border: none;
+    padding: 0 1vw;
+}
+
+
+.contact-left textarea{
+    height: 140px;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    gap: 10px;
+    cursor: pointer;
+    background-color:black;
+    color: white;
+    border: none;
+}
+
+@media(max-width:800px) {
+    .contact-inputs{
+        width: 80vw;
+    }
+
+    nav a{
+
+        font-size: 7vw;
+    }
+}
+
+

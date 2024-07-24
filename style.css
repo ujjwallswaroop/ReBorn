@@ -59,6 +59,11 @@ nav {
   padding: 3vw 3vw;
 }
 
+#navs{
+  display: flex;
+  gap: 5vw;
+}
+
 nav h3,
 h4 {
   color: #fff;
