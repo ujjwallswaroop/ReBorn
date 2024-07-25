@@ -121,6 +121,7 @@ h4 {
   .product-grid {
     grid-template-columns: 1fr 1fr;
   }
+  object-fit: cover;
 
   .brandname {
     font-size: 1.2rem;
@@ -131,4 +132,115 @@ h4 {
   .product-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.cart-icon i {
+  padding: 10px;
+  border-radius:5px;
+  cursor: pointer;
+  background: #d6e8db;
+}
+.cart-icon{
+  position: relative;
+}
+.fa-cart-shopping{
+  background: transparent !important;
+  border: 1px solid #99a98f; 
+  color: v#99a98f;
+}
+
+.cart-icon span{
+  background:rgb(9,189,9);
+  color:#fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+}
+.sidebar{
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  /* right: 0; */
+  right: -300px;
+  background-color: #fff;
+  box-shadow: -4px 0 6px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.sidebar.open{
+  right: 0;
+}
+.sidebar-close{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+.cart-item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.individual-cart-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-radius: 5px;
+  color: grey;
+  border: 1px solid #d6e8db;
+}
+
+.cart-item-price{
+  color:#99a98f
+}
+
+.sidebar--footer{
+  position: absolute;
+  bottom: 10px;
+  width: 88%;
+}
+.total--amount{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid #d6e8db;
+  border-radius: 5px;
+  padding: 15px 10px;
+}
+.cart-total{
+  font-size: 16px;
+  color:#99a98f;
+  font-weight: 500;
+}
+.checkout-btn{
+  width: 100%;
+  margin-top: 2rem;
+  background: rgb(9,189,9);
+  color: #d6e8db;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.remove-item{
+  background: #99a98f;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 8px;
+  cursor: pointer;
+  margin-left: 140px;
+  border: none;
 }

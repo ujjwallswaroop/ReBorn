@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReBorn - Shop</title>
     <link href="./shop.css" rel="stylesheet" />
-    <link rel="icon" href="./Media/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   </head>
   <body>
     <nav>
       <a href="./index.html"><h3 class="brandname">ReBorn Co.</h3></a>
       <!-- <a href="./shop.html"><h4>Cart</h4></a> -->
+       <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>0</span>
+       </div>
     </nav>
     <div class="container">
       <h1 class="heading">Our Products</h1>
       <div class="product-grid"></div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-close">
+        <i class="fa-solid fa-close"></i>
+      </div>
+        <div class="cart-menu">
+          <h3>My Cart</h3>
+          <div class="cart-items"></div>
+        </div>
+
+        <div class="sidebar--footer">
+          <div class="total--amount">
+            <h5>Total</h5>
+            <div class="cart-total">Rs 0.00</div>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      
     </div>
 
     <script src="./shop.js"></script>
