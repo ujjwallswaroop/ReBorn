@@ -120,8 +120,9 @@ h4 {
   }
   .product-grid {
     grid-template-columns: 1fr 1fr;
+    object-fit: cover;
   }
-  object-fit: cover;
+  
 
   .brandname {
     font-size: 1.2rem;
@@ -150,7 +151,7 @@ h4 {
 }
 
 .cart-icon span{
-  background:rgb(9,189,9);
+  background:#7e502e;
   color:#fff;
   border-radius: 50%;
   width: 15px;
@@ -228,7 +229,7 @@ h4 {
 .checkout-btn{
   width: 100%;
   margin-top: 2rem;
-  background: rgb(9,189,9);
+  background: #7e502e;
   color: #d6e8db;
   border-radius: 5px;
   cursor: pointer;

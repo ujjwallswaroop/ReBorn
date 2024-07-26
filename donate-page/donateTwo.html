@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - ReBorn Co.</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="./donateTwo.css">
+    <link rel="icon" href="./donate-assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <div id="home">
+            <nav>
+                <a href="./donate.html"><h3>ReBorn Co.</h3></a>
+            </nav>
+
+            <div id="hero">
+                <div class="anim2" id="sustain">
+                    <h5>01.</h5>
+                    <h2>Sustainability</h2>
+                    <p>"Donate for a greener, sustainable future."</p>
+                    <div id="susimagewrapper">
+                        <img src="./donate-assets/leaf.jpg" alt="">
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <video  id="bgv" src="./bg.mp4" autoplay loop muted></video>
+                    <form action="" class="contact-left" >
+                        <div class="contact-left-titile">
+                            <h2>Join the movement </h2>
+                            <hr>
+                        </div>
+                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                        <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
+                        <label for="cars">Type :</label>
+                        <select class="contact-inputs" name="type">
+                          <option value="select">Select</option>
+                          <option value="Clothes">Clothes and textiles</option>
+                          <option value="books">Books</option>
+                          <option value="hi">Household items</option>
+                          <option value="plastic">Plastic</option>
+                        </select>
+                        <button type="submit">Submit</button>
+                    </form>
+            
+                    <div class="contact-right">
+            
+                    </div>
+                </div>
+                <div class="anim2" id="donate">
+                    <div id="headings">
+                        <h1>Donate.</h1>
+                    </div>
+                    <img id="cactus" src="./donate-assets/ephermal.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  Gsap is needed for Basic Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- Scroll Trigger is needed for Scroll Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="./donateTwo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+@font-face {
+    font-family: rejoy;
+    src: url(./donate-assets/Rejouice-Headline.ttf);
+}
+
+@font-face {
+    font-family: nb;
+    src: url(./donate-assets/NBInternationalProBoo.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    font-family: rejoy;
+    overflow: hidden;
+    
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+}
+
+nav{
+    /* height: 20%;
+    width: 100%; */
+    padding: 3vw 3vw;
+}
+
+nav a h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+#hero{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    margin-top: 15vw;
+    padding: 0 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#sustain{
+   margin-top: 15%;
+}
+
+#sustain #susimagewrapper{
+    width: 15vw;
+    height: 18vw;
+    /* background-color: red; */
+}
+
+#sustain h2{
+    font-weight: 500;
+}
+
+#susimagewrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#donate{
+    width: 20vw;
+    height: 72vh;
+    /* background-color: red; */
+    /* margin-bottom: 12%;
+    margin-left: 3%;
+     */
+     position: relative;
+     top: -40%;
+}
+
+#bgv{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vh;
+}
+
+.contact-left-titile h2{
+    font-weight: 100;
+    font-size: 5vw;
+    margin-bottom: 5px;
+    color: 	black;
+}
+
+.contact-inputs{
+    height: 50px;
+    width: 650px;
+    border: none;
+    padding: 0 1vw;
+    background-color: #dadada66;
+}
+
+
+.contact-left textarea{
+    height: 140px;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    gap: 10px;
+    cursor: pointer;
+    background-color:black;
+    color: white;
+    border: none;
+}
+
+#donate h1{
+    font-size: 4rem;
+}
+
+#donate #headings{
+    position: absolute;
+    top: -6%;
+    left: -6%;
+}
+
+#donate img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#headings h1{
+    font-weight: 550;
+    z-index: 999;
+}
+
+#cactus{
+    z-index: -9999;
+}
