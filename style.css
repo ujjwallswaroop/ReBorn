@@ -27,11 +27,12 @@ a {
 
 /* General styles for the page */
 #page1 {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   position: relative; /* Ensure positioning context for the video */
+  overflow: hidden; /* Hides any overflow from the video */
 }
 
 /* Video styling */
@@ -84,7 +85,7 @@ nav {
   top: 0; /* Positions the nav at the top of the page */
   left: 0; /* Ensures the nav spans the entire width */
   z-index: 10; /* Higher z-index to appear above the video */
-  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background for better visibility */
+  //background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background for better visibility */
 }
 
 /* Navigation links container */
@@ -482,7 +483,7 @@ h4 {
   }
 
   #page6 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
