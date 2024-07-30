@@ -1,84 +1,84 @@
 @font-face {
-    font-family: rejoy;
-    src: url(./donate-assets/Rejouice-Headline.ttf);
+  font-family: rejoy;
+  src: url(./donate-assets/Rejouice-Headline.ttf);
 }
 
 @font-face {
-    font-family: nb;
-    src: url(./donate-assets/NBInternationalProBoo.ttf);
+  font-family: nb;
+  src: url(./donate-assets/NBInternationalProBoo.ttf);
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html , body{
-    height: 100%;
-    width: 100%;
-    font-family: rejoy;
-}
-
-nav{
-    /* background-color: crimson; */
-    height: 20vh;
-    width: 100%;
-    padding: 3vw;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: rejoy;
 }
 
-#brandname{
-    font-family: nb;
-    font-size: 1.5rem;
-    color: black;
+#brandname {
+  z-index: 99999999 !important;
 }
 
-nav a{
-    text-decoration: none;
-}
-#main{
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
+nav {
+  /* background-color: crimson; */
+  height: 20vh;
+  width: 100%;
+  padding: 3vw;
 }
 
-#main video{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+#brandname {
+  font-family: nb;
+  font-size: 1.5rem;
+  color: black;
 }
 
-#ftext{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 9999;
-    background-color: #fff;
-    padding: 1.4vw 3vw;
-    border-radius: 10px;
-
+nav a {
+  text-decoration: none;
+}
+#main {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
 }
 
-#ftext button{
-    padding: 1vw 1.3vw;
-    border-radius: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.316);
-    background-color: #fff;
-    cursor: pointer;
-    font-family: nb;
-    text-transform:capitalize ;
-    margin-top: 10px;
+#main video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
+#ftext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 1.4vw 3vw;
+  border-radius: 10px;
+}
 
-
+#ftext button {
+  padding: 1vw 1.3vw;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.316);
+  background-color: #fff;
+  cursor: pointer;
+  font-family: nb;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
