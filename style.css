@@ -19,7 +19,9 @@ body {
   font-family: nb;
 }
 
-
+#maplink2{
+  display: none;
+}
 
 .nav-link {
   position: relative;
@@ -109,6 +111,10 @@ a {
     display: none;
   }
 
+  
+#maplink2{
+  display: block;
+}
 }
 
 
