@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2024 SDG Index Score Map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: nb;
+        src: url(./Media/NBInternationalProBoo.ttf);
+      }
+
+      @font-face {
+        font-family: rejoy;
+        src: url(./Media/Rejouice-Headline.ttf);
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-family: "nb";
+        display: flex;
+        justify-content: center;
+      }
+      #map {
+        width: 100%;
+        height: 100vh;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .plotly-title {
+        font-family: "rejoy", sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 4rem !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      function loadCSV(callback) {
+        Papa.parse("dataset.csv", {
+          header: true,
+          download: true,
+          complete: function (results) {
+            callback(results.data);
+          },
+        });
+      }
+
+      function createMap(data) {
+        var countryCodes = data.map((row) => row["Country Code ISO3"]);
+        var countryNames = data.map((row) => row["Country Name"]);
+        var sdgScores = data.map((row) => row["2024 SDG Index Score"]);
+
+        var mapData = [
+          {
+            type: "choropleth",
+            locations: countryCodes,
+            z: sdgScores,
+            text: data.map(
+              (row) => `${row["Country"]}: ${row["2024 SDG Index Score"]}`
+            ),
+            hoverinfo: "text+z",
+            colorscale: [
+              [0, "#ffffe5"],
+              [0.1, "#f7fcb9"],
+              [0.2, "#e5f5e0"],
+              [0.3, "#c7e9c0"],
+              [0.4, "#a1d99b"],
+              [0.5, "#74c476"],
+              [0.6, "#41ab5d"],
+              [0.7, "#238b45"],
+              [0.8, "#006d2c"],
+              [1, "#00441b"],
+            ],
+            autocolorscale: false,
+            marker: {
+              line: {
+                color: "#ffffff",
+                width: 0.5,
+              },
+            },
+            colorbar: {
+              title: "2024 SDG Index Score",
+              thickness: 20,
+              len: 0.5,
+              tickfont: { family: "rejoy", size: 15 },
+              titlefont: { family: "rejoy", size: 18, color: "#4a4a4a" },
+            },
+          },
+        ];
+
+        var layout = {
+          title: {
+            text: "2024 SDG Index Scores by Country",
+            subtitle: {
+              text: "This is based on the latest data provided by www.hshgs.com",
+              
+            },
+
+            font: {
+              family: "Rejoy",
+              size: 24,
+              color: "#333333",
+            },
+            y: 0.98,
+          },
+          geo: {
+            showframe: false,
+            showcoastlines: true,
+            projection: {
+              type: "natural earth",
+            },
+            coastlinecolor: "#d4d4d4",
+            landcolor: "#f0f0f0",
+            showocean: true,
+            oceancolor: "#e0f7fa",
+            showlakes: true,
+            lakecolor: "#eaeaea",
+            showrivers: true,
+            rivercolor: "#eaeaea",
+          },
+          //   paper_bgcolor: "#f0f0f0",
+          plot_bgcolor: "#f0f0f0",
+          width: window.innerWidth,
+          height: window.innerHeight,
+          margin: { l: 0, r: 0, b: 0, t: 50, pad: 0 },
+          hoverlabel: {
+            bgcolor: "#ffffff",
+            bordercolor: "#333333",
+            font: { family: "Roboto", size: 14 },
+          },
+        };
+
+        var config = {
+          responsive: true,
+          displayModeBar: false,
+        };
+
+        Plotly.newPlot("map", mapData, layout, config);
+      }
+
+      loadCSV(createMap);
+
+      window.addEventListener("resize", function () {
+        Plotly.relayout("map", {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      });
+    </script>
+  </body>
+</html>
