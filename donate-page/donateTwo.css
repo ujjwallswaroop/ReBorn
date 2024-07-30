@@ -18,23 +18,21 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'Rejoy', sans-serif;
-    overflow-x: hidden;
+    /* overflow: hidden; */
 }
 
-#main {
-    width: 100%;
-    min-height: 100vh;
-}
 
 nav {
     padding: 1.5rem;
     background-color: #fff;
+    height: 10vh;
 }
 
 nav a h3 {
     font-size: 1.5rem;
     font-weight: 500;
     color: #333;
+    padding: .5vw 0vw;
 }
 
 nav a {
@@ -42,6 +40,7 @@ nav a {
 }
 
 #hero {
+    height: 80vh;
     width: 100%;
     padding: 0 2rem;
     display: flex;
@@ -50,6 +49,7 @@ nav a {
     justify-content: center;
     gap: 2rem;
     margin-top: 5rem;
+    overflow: hidden;
 }
 
 #sustain {

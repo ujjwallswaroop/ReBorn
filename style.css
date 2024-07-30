@@ -19,11 +19,43 @@ body {
   font-family: nb;
 }
 
-a {
+#maplink2{
+  display: none;
+}
+
+.nav-link {
+  position: relative;
   text-decoration: none;
+  color: inherit;
+}
+
+.nav-link h4 {
+  position: relative;
+}
+
+.nav-link h4::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -5px; /* Adjust this value to change the gap */
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover h4::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 
+
+a {
+  text-decoration: none;
+}
 
 /* General styles for the page */
 #page1 {
@@ -33,6 +65,7 @@ a {
   justify-content: center;
   position: relative; /* Ensure positioning context for the video */
   overflow: hidden; /* Hides any overflow from the video */
+  background-color: #00000049;
 }
 
 /* Video styling */
@@ -48,6 +81,7 @@ a {
 
 /* Content styling */
 #page1-content {
+  margin-top: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +106,17 @@ a {
   #page1-content {
     padding: 2rem; /* Adjust padding for smaller screens */
   }
+
+  #maplink{
+    display: none;
+  }
+
+  
+#maplink2{
+  display: block;
 }
+}
+
 
 
 nav {
@@ -85,7 +129,7 @@ nav {
   top: 0; /* Positions the nav at the top of the page */
   left: 0; /* Ensures the nav spans the entire width */
   z-index: 10; /* Higher z-index to appear above the video */
-  //background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background for better visibility */
+  /* background: rgba(0, 0, 0, 0.5); Optional: Adds a semi-transparent background for better visibility */
 }
 
 /* Navigation links container */
@@ -108,6 +152,10 @@ h4 {
     padding: 5vw 3vw; /* Adjust padding for smaller screens */
   }
 
+  #page1-content{
+    margin-top: 0;
+  }
+
   nav h3,
   h4 {
     font-size: 4vw; /* Adjust font size for smaller screens */
@@ -116,6 +164,12 @@ h4 {
   #navs {
     gap: 3vw; /* Adjust gap between nav items for smaller screens */
   }
+
+  #maplink{
+    
+  }
+
+  
 }
 /*  */
 
@@ -125,6 +179,7 @@ h4 {
   font-size: 20vw;
   font-weight: 500;
   color: #fff;
+  
 }
 
 #cursor {
@@ -211,6 +266,10 @@ h4 {
   #page2part2 h3 {
     padding-top: 5vh; /* Adjust padding for smaller screens */
     font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+
+  #page1-content h1 {
+    padding: 0;
   }
 }
 
@@ -310,6 +369,7 @@ h4 {
 #page4bottom h3 {
   font-size: 4rem;
   font-weight: 100;
+  text-align: center;
 }
 
 #page5 {

@@ -2,6 +2,11 @@
   font-family: nb;
   src: url(./Media/NBInternationalProBoo.ttf);
 }
+
+@font-face {
+    font-family: rejoy;
+    src: url(./Media/Rejouice-Headline.ttf);
+  }
 *{
     margin: 0;
     padding: 0;
@@ -52,10 +57,11 @@ nav a{
 }
 
 .contact-left-titile h2{
-    font-weight: 100;
+    font-weight: 500;
     font-size: 5vw;
     margin-bottom: 5px;
     color: 	black;
+    font-family: rejoy;
 }
 
 .contact-inputs{
